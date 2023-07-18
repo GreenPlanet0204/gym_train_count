@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Smart Gym Tracker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="video-container">
+      <video id="video" controls width="540" height="960">
+        <source
+          src="./Shoulder pressing 75lb34kg dumbbells at 115lb53kg.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <canvas id="canvas" width="540" height="960"></canvas>
+    </div>
+
+    <div id="controls-container">
+      <div>
+        <h1>Smart Gym Tracker</h1>
+        <button id="startButton">Start</button>
+      </div>
+      <div id="repetitionCount">Repetitions: 0</div>
+    </div>
+
+    <!-- Require the peer dependencies of pose-detection. -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    
+
+    <!-- You must explicitly require a TF.js backend if you're not using the TF.js union bundle. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm/dist/tf-backend-wasm.js"></script> -->
+    <!-- <script async src="https://docs.opencv.org/4.5.4/opencv.js" type="text/javascript"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script> -->
+
+
+    <!-- <script>
+      tf.setBackend('wasm').then(() => loadPoseNetModel())
+    </script> -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+
+    <!-- <script src="detect.js"></script> -->
+    <script src="script.js"></script>
+  </body>
+</html>
